@@ -1,7 +1,7 @@
-
-Deploy this code in your org !!!
-https://githubsfdeploy.herokuapp.com/app/githubdeploy/luiszerba/DataCloudUtils
-
+<a href="https://githubsfdeploy.herokuapp.com?owner=luiszerba&repo=DataCloudUtils&ref=main">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
 
 # DataCloudUtils
 
