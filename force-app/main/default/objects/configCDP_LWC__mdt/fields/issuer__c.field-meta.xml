@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>issuer__c</fullName>
+    <description>The issuer must contain the OAuth client_id or the connected app for which you registered the certificate.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The issuer must contain the OAuth client_id or the connected app for which you registered the certificate.</inlineHelpText>
+    <label>issuer</label>
+    <length>255</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

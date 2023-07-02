@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>audience__c</fullName>
+    <defaultValue>&apos;https://login.salesforce.com&apos;</defaultValue>
+    <description>The audience identifies the authorization server as an intended audience. The authorization server must verify that it’s an intended audience for the token.
+
+Use the authorization server’s URL for the audience value: https://login.salesforce.com, https://test.salesforce.com, or https://site.force.com/customers if implementing for an Experience Cloud site.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The audience identifies the authorization server as an intended audience. The authorization server must verify that it’s an intended audience for the token.
+
+Use the authorization server’s URL for the audience value: https://login.salesforce.com, https://test.salesforce.com, or https://site.force.com/customers if implementing for an Experience Cloud site.</inlineHelpText>
+    <label>audience</label>
+    <length>255</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

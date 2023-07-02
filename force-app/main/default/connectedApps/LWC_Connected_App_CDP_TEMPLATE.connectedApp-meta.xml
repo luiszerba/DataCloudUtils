@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>UPDATE_YOUR@EMAIL.HERE</contactEmail>
+    <label>LWC Connected App CDP_TEMPLATE</label>
+    <oauthConfig>
+        <callbackUrl>https://login.salesforce.com/services/oauth2/callback</callbackUrl>
+        <certificate>MIIDqjCCApICCQDXARICWoQvwjANBgkqhkiG9w0BAQsFADCBljELMAkGA1UEBhMCQlIxCzAJBgNVBAgMAlNQMRUwEwYDVQQHDAxTw4PCo28gUGF1bG8xEzARBgNVBAoMCnNhbGVzZm9yY2UxCzAJBgNVBAsMAlNFMRowGAYDVQQDDBFTb2x1dGlvbiBFbmdpbmVlcjElMCMGCSqGSIb3DQEJARYWbGNvcnJlYUBzYWxlc2ZvcmNlLmNvbTAeFw0yMzA2MzAyMTU5NDFaFw0yNDA2MjkyMTU5NDFaMIGWMQswCQYDVQQGEwJCUjELMAkGA1UECAwCU1AxFTATBgNVBAcMDFPDg8KjbyBQYXVsbzETMBEGA1UECgwKc2FsZXNmb3JjZTELMAkGA1UECwwCU0UxGjAYBgNVBAMMEVNvbHV0aW9uIEVuZ2luZWVyMSUwIwYJKoZIhvcNAQkBFhZsY29ycmVhQHNhbGVzZm9yY2UuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq/K14wyZGNuUTZFR7RPG+uAyKrmQiykHmC43COVl9azGHekAFshPAi8Mq6ePXUSRmPbup3xp4e1TRq6z//HoEE7ayxHtXKzk7jqN5twLjEXiH9Pdl0byRJs/VXa0NSJo0ulVveTVYoNXjgRrN4VxqZ2wwhsgF/PywxIyuOWskssj7cFPFnLYtn5ao7bFnZ7+zr5gDlokhFL/pud/GcleGOuvIJhGCag4L6TXS5uEcxtN+7JTA8M6LPnd3eVgafO8ePp1KgeeWoGeR3IUZfeAUgFS3+DSBJjtvUlWyQumQhon41jH92cd0umA9zm9GSuXXgyeVnzNSlt2auzsQ7fH2wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBH6KVpatDNrWRfLrvJ6rSYE7AY3sj2w0/TStDi/HGtozK/lB8SrZg/4z9O6AyeKn7PP+hB/YAQap8/FcNMRNttH/6Tu7ahIs/AWbmwFdm+XgDB4jamjBIFcZ1p4dzv8H+Bqv3QCkVkux1VecOigRBUOopEjgKPNFE6KsSuzpQ51Cy/24NRhb+fHTCamWv3FeoC0DbkNh0m650jNKxc9iIYiCwuY8x8KI1GwJoTw2S30uU5NKh0QWg+ohk/55YIZbmLsUvH/0IUMxZVvdjUvJeaa6saBBKdYPjMLdp4EIeytojSJ3vE3GzDknjqiyIWJeQbY4boWdvVw7tgjN9FGCS2</certificate>
+        <consumerKey></consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>true</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>true</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <oauthClientCredentialUser>UPDATE_YOUR_CLIENT_CREDENTIAL@EMAIL.HERE</oauthClientCredentialUser>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>specific_lifetime:10:DAYS</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>
