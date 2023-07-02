@@ -1,6 +1,6 @@
 
 Deploy this code in your org !!!
-https://githubsfdeploy.herokuapp.com/app/githubdeploy/luiszerba/DataCloudUtils/
+https://githubsfdeploy.herokuapp.com/app/githubdeploy/luiszerba/DataCloudUtils
 
 
 # DataCloudUtils
