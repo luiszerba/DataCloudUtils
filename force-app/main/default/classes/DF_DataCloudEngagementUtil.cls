@@ -9,7 +9,6 @@ public with sharing class DF_DataCloudEngagementUtil {
             Contact contactInfo = [SELECT CPF__c,id FROM Contact WHERE id = :sourceRecordId LIMIT 1];
 
             System.debug('[contactInfo]:'+contactInfo);
-            
             String query = 
                 'SELECT cpf__c, transaction_id__c, value__c, purchase_category__c,date__c '
                 + ' FROM S3_TransactDatabasev2__dlm'

@@ -21,7 +21,7 @@ public with sharing class JWTSessionHandler {
 
         HttpResponse response = http.send(request);
         JWTBearerInfo jwtDataCloudBearerInfo = (JWTBearerInfo)JSON.deserializeStrict(response.getBody(), JWTBearerInfo.class);
-        System.debug('[jwtDataCloudBearerInfo]:'+jwtDataCloudBearerInfo);
+        System.debug('[JWTSessionHandler.getDataCloudBearerToken()#jwtDataCloudBearerInfo]:'+jwtDataCloudBearerInfo);
         
         return jwtDataCloudBearerInfo;
     }
@@ -54,7 +54,7 @@ public with sharing class JWTSessionHandler {
         String accessToken = bearer.getAccessToken();
         JWTBearerInfo result = (JWTBearerInfo) JSON.deserializeStrict((String)bearer.getHttpResponse().getBody(), JWTBearerInfo.class);
 
-        System.debug('[result]:\n'+result.toString());
+        System.debug('[JWTSessionHandler.getBearerToken()#result]:\n'+result.toString());
         return result;
     }
 }

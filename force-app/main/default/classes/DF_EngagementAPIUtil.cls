@@ -6,10 +6,7 @@ public with sharing class DF_EngagementAPIUtil {
         try {
             Contact contactInfo = [SELECT CPF__c,id FROM Contact WHERE id = :sourceRecordId LIMIT 1];
 
-            String query = 
-                'SELECT cpf__c, transaction_id__c, value__c, purchase_category__c,date__c '
-                + ' FROM S3_TransactDatabasev2__dlm'
-                + ' WHERE cpf__c = \'' + contactInfo.cpf__c + '\' ORDER BY date__c DESC LIMIT 10';
+            String query = 'SELECT cpf__c, purchase_category__c, transaction_id__c, value__c, date__c FROM S3_TransactDatabasev2__dlm LIMIT 10';
 
             String [] header = new String[]{'cpf__c','transaction_id__c','value__c','purchase_category__c','date__c'};
 

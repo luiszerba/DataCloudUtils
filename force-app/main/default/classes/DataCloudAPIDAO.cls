@@ -55,6 +55,8 @@ public virtual class DataCloudAPIDAO {
         request.setBody(body);
 
         HttpResponse response = http.send(request);
+
+        System.debug('DataCloudAPIDAO.requestDataCloudQueryAPI()#response'+response);
         
         return parseHttpResponseFromQueryAPI(header, response.getBody());
 
