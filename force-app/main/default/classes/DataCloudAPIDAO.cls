@@ -6,6 +6,44 @@ public virtual class DataCloudAPIDAO {
         this.bearer = dataCloudBearer;
     }  
 
+    //https://developer.salesforce.com/docs/atlas.en-us.c360a_api.meta/c360a_api/c360a_api_metadata_api.htm
+    public MetadataClass queryDataCloudMetadata(String entityType, String entityCategory, String entityName){
+        
+        String dataCloudEndpoint = 'https://' + this.bearer.instance_url + '/api/v1/metadata';
+
+        String body = '?';
+
+        if('DataLakeObject'.equals(entityType) 
+            || 'DataModelObject'.equals(entityType) 
+            || 'CalculatedInsight'.equals(entityType)){
+                body += 'entityType='+entityType+'&';
+        }
+        if('Profile'.equals(entityCategory) 
+            || 'Engagement'.equals(entityCategory) 
+            || 'Related'.equals(entityCategory)){
+                body += 'entityCategory='+entityCategory+'&';
+        }
+        if(entityName != null){
+            body += 'entityName='+entityName+'&';
+        }
+        
+        dataCloudEndpoint += body;
+        
+        Http http = new Http();
+        HttpRequest request = new HttpRequest();
+        request.setMethod('GET');
+        request.setEndpoint(dataCloudEndpoint);
+        request.setHeader('Content-Type', 'application/json');
+        request.setHeader('Authorization', this.bearer.getAuthorizationBearerToDataCloudAPI());
+        
+        HttpResponse response = http.send(request);
+
+        System.debug('DataCloudAPIDAO.queryDataCloudMetadata()#response'+response);
+        System.debug('DataCloudAPIDAO.queryDataCloudMetadata()#response.getBody()'+response.getBody());
+        
+        return (MetadataClass)JSON.deserialize(response.getBody(), MetadataClass.class);
+    }
+
     public static List<Map<String,Object>> parseHttpResponseFromQueryAPI(List<String> header, String response){
         
         Map<String, Object> parsedJson = (Map<String, Object>) JSON.deserializeUntyped(response);

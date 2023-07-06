@@ -8,11 +8,9 @@ public with sharing
     public List<Map<String,Object>> queryAll(String [] header, String query){
 
         return this.requestDataCloudQueryAPI(header,query);
-
     }
 
     public Map<String,Object> queryById(String id,String query){
-
         return null;
     }
 
