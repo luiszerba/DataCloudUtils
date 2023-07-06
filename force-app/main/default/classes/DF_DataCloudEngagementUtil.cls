@@ -15,7 +15,6 @@ public with sharing class DF_DataCloudEngagementUtil {
                 + ' FROM S3_TransactDatabasev2__dlm'
                 + ' WHERE cpf__c = \'' + contactInfo.CPF__c + '\' ORDER BY date__c DESC LIMIT 10';
             
-            
             List<SObject> engagementList = Database.query(query);
             
             return engagementList.isEmpty()? null : engagementList;

@@ -1,5 +1,6 @@
 <template>
     <lightning-card title="Transações do Cliente" icon-name="standard:events">
+
         <template if:true={data}>
             <div class="slds-m-around_medium slds-scrollable--y" style="max-height:300px;">
                 <lightning-datatable 
@@ -10,6 +11,7 @@
                 </lightning-datatable>
             </div>
         </template>
+
         <template if:true={error}>
             {error}>
         </template>

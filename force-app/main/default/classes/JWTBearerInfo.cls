@@ -1,10 +1,10 @@
 public with sharing class JWTBearerInfo {
 
-    private String access_token{get;set;}
-    private String scope{get;set;}
-    private String instance_url{get;set;}
-    private String id{get;set;}
-    private String token_type{get;set;}
+    public String access_token{get;set;}
+    public String scope{get;set;}
+    public String instance_url{get;set;}
+    public String id{get;set;}
+    public String token_type{get;set;}
     public String issued_token_type{get;set;}
     public Integer expires_in{get;set;}
 
@@ -32,7 +32,12 @@ public with sharing class JWTBearerInfo {
         return dataCloudRequestBody;
     }
 
-    
+    public String getAuthorizationBearerToDataCloudAPI(){
+        if(this.access_token == null) throw new JWTBearerTokenException('access_token not defined');
+
+        return 'Bearer ' + this.access_token;
+    }
+
     public override String toString(){
         return '[access_token]:' + access_token +
                 '\n[scope]:' + scope + 

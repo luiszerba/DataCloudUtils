@@ -18,12 +18,13 @@ export default class DF_EngagementData extends LightningElement {
 
     @wire(getEngagementListFromContactByAPI, {sourceRecordId: '$recordId'} )
     engagementData({error, data}){
-        if(data){
+        if (data) {
             this.data = data;
             this.error = undefined;
-        }else if(error) {
+        } else if (error) {
             this.error = error;
-            this.record = undefined;
+            this.data = undefined;
+            console.error('[error]:', error);
         }
     }
 
