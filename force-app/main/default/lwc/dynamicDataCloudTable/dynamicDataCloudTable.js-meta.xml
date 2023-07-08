@@ -11,10 +11,9 @@
 
     <targetConfigs>
         <targetConfig targets="lightning__RecordPage">
-                <property label="Available DMO's" name="propertyDMO" type="String" datasource="apex://DF_DataCloudPropertyDS" />
-                <!--property name="dataLakeFields" type="String" />
-                <property name="recordObject" type="String" />
-                <property name="matchOnRecordField" type="String" /-->
+                <property label="Match On" name="matchOn" type="String" datasource="apex://DF_sObjectFieldPropertyDS" required="true"/>
+                <property label="Available DMO's" name="propertyDMO" type="String" required="true" />
+                <property label="DMO Field to Match" name="propertyDMOFieldToMatch" type="String" required="true" />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

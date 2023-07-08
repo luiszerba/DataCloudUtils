@@ -18,4 +18,13 @@ public with sharing class DF_EngagementAPIUtil {
             throw new AuraHandledException(e.getMessage());
         }
     }
+
+    @AuraEnabled(cacheable=true)
+    public static List<Map<String,Object>> getEngagementListFromEntityNameByMatchOnField(String recordId, String entityName, String matchOnField){
+        try {
+            return null;
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
 }

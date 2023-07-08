@@ -1,6 +1,6 @@
 import { LightningElement } from 'lwc';
 import { api,wire,track } from 'lwc';
-import getEngagementListFromContactByAPI from '@salesforce/apex/DF_EngagementAPIUtil.getEngagementListFromContactByAPI'
+import getEngagementListFromContactByAPI from '@salesforce/apex/DF_EngagementAPIUtil.getEngagementListFromContactByAPI';
 
 const columns = [
     { label: '#Id', fieldName: 'transaction_id__c', type: 'text'},
@@ -13,6 +13,12 @@ export default class DynamicDataCloudTable extends LightningElement {
 
     @api
     propertyDMO;
+
+    @api
+    matchOn;
+
+    @api
+    propertyDMOFieldToMatch;
 
     @track data;
     columns = columns;
