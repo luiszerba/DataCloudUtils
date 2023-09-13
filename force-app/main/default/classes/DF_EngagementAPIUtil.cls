@@ -20,8 +20,10 @@ public with sharing class DF_EngagementAPIUtil {
     }
 
     @AuraEnabled(cacheable=true)
-    public static List<Map<String,Object>> getEngagementListFromEntityNameByMatchOnField(String recordId, String entityName, String matchOnField){
+    public static List<Map<String,Object>> getEngagementListFromEntityNameByMatchOnField(String recordId, String entityName, String matchOnField, String propertyDMOFieldToMatch){
         try {
+            //sObject contactInfo = [SELECT CPF__c,id FROM Contact WHERE id = :sourceRecordId LIMIT 1];
+            //String query = 'SELECT * FROM ' + entityName +  'WHERE ' + matchOnField + ' = ' + propertyDMOFieldToMatch
             return null;
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());

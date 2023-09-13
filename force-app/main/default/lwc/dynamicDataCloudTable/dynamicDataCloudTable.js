@@ -1,6 +1,6 @@
 import { LightningElement } from 'lwc';
 import { api,wire,track } from 'lwc';
-import getEngagementListFromContactByAPI from '@salesforce/apex/DF_EngagementAPIUtil.getEngagementListFromContactByAPI';
+import getEngagementListFromEntityNameByMatchOnField from '@salesforce/apex/DF_EngagementAPIUtil.getEngagementListFromEntityNameByMatchOnField';
 
 const columns = [
     { label: '#Id', fieldName: 'transaction_id__c', type: 'text'},
@@ -26,7 +26,7 @@ export default class DynamicDataCloudTable extends LightningElement {
     @api recordId;
     @track error;
 
-    @wire(getEngagementListFromContactByAPI, {sourceRecordId: '$recordId'} )
+    @wire(getEngagementListFromEntityNameByMatchOnField, {recordId: '$recordId', entityName: '$propertyDMO', matchOnField: '$matchOn', propertyDMOFieldToMatch: '$propertyDMOFieldToMatch'} )
     engagementData({error, data}){
         if (data) {
             this.data = data;

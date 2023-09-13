@@ -3,9 +3,9 @@ import getEngagementListFromContactByAPI from '@salesforce/apex/DF_EngagementAPI
 
 const columns = [
     { label: '#Id', fieldName: 'transaction_id__c', type: 'text'},
-    { label: 'CPF', fieldName: 'cpf__c', type: 'text'},
-    { label: 'Valor', fieldName: 'value__c', type: 'currency' },
-    { label: 'Categoria', fieldName: 'purchase_category__c', type: 'text'}
+    { label: 'Document', fieldName: 'cpf__c', type: 'text'},
+    { label: 'Amount', fieldName: 'value__c', type: 'currency' },
+    { label: 'Category', fieldName: 'purchase_category__c', type: 'text'}
 ];
 
 export default class DF_EngagementData extends LightningElement {

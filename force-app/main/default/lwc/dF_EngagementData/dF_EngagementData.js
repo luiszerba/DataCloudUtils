@@ -19,6 +19,7 @@ export default class DF_EngagementData extends LightningElement {
     @wire(getEngagementListFromContact, {sourceRecordId: '$recordId'} )
     engagementData({error, data}){
         if(data){
+            console.log('Teste:'+JSON.stringify(data));
             this.data = data;
             this.error = undefined;
         }else if(error) {
