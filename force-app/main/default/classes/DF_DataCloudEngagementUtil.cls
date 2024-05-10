@@ -12,13 +12,21 @@ public with sharing class DF_DataCloudEngagementUtil {
                 'cpf__c' => contactInfo.CPF__c
             };
 
-            String query = 
+            /*String query = 
                 'SELECT cpf__c, transaction_id__c, value__c, purchase_category__c,date__c '
-                + ' FROM S3_TransactDatabasev2__dlm'
-                + ' WHERE cpf__c = :cpf__c ORDER BY date__c DESC LIMIT 10';
+                + ' FROM WDC_CreditCardTransactions__dlm'
+                + ' WHERE cpf__c = :cpf__c ORDER BY date__c DESC LIMIT 20';*/
+            String query = 
+                'SELECT DataSourceObject__c,DataSource__c,KQ_cpf__c,KQ_interaction_id__c,aquecimento__c,area__c, '
+                + ' banheiros__c,cpf__c,date__c,financiamento__c,garagem__c,id_imovel__c, '
+                + ' interaction_id__c,mobilia__c,permuta__c,price__c,quartos__c,title__c,Property_URL_Information__c, url__c '
+                + ' FROM restate_customer_nav_wt_fy25__dlm '
+                + ' WHERE cpf__c = :cpf__c AND Property_URL_Information__c != \'\' ORDER BY date__c DESC LIMIT 20';
             
             List<SObject> engagementList = 
                 Database.queryWithBinds(query,contactBinds,AccessLevel.SYSTEM_MODE);
+
+            
             
             return engagementList.isEmpty()? null : engagementList;
 
